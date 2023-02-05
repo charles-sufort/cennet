@@ -5,10 +5,11 @@ using namespace Eigen;
 using namespace std;
 
 int main(){
-	MatrixXf M;
-	M = MatrixXf::Zero(2,2);
-	cout << M <<endl;
-	M << 3.0,2.0,1.0,1.3;
-	cout << M << endl;
+	std::vector<int> range;
+	int n = 100;
+	for (int i=0; i<n; i++) range.push_back(i);
+	cout << range[0] << endl;
+	random_shuffle(range.begin(), range.end());
+	cout << range[0] << endl;
 	return 0;
 }
